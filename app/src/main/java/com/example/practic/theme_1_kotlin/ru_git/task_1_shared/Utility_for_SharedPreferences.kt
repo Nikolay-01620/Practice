@@ -1,4 +1,4 @@
-package com.example.practic.theme_1_kotlin.ru_git.shared
+package com.example.practic.theme_1_kotlin.ru_git.task_1_shared
 
 import android.content.SharedPreferences
 import kotlinx.coroutines.CoroutineScope

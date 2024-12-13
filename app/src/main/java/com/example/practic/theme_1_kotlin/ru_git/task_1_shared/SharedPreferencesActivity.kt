@@ -1,4 +1,4 @@
-package com.example.practic.theme_1_kotlin.ru_git.shared
+package com.example.practic.theme_1_kotlin.ru_git.task_1_shared
 
 import android.content.Context
 import android.os.Bundle
@@ -32,13 +32,13 @@ class SharedPreferencesActivity : AppCompatActivity() {
             key = "kolya",
             value = valueToSave,
             useCommit = false,
+
             onSuccess = {
-                // Успешно сохранено
-                binding.getValue.text = "Value saved successfully!"
+                binding.getValue.text = TODO()
             },
+
             onError = { e ->
-                // Ошибка при сохранении
-                binding.getValue.text = "Error saving value: ${e.message}"
+                binding.getValue.text = TODO()
             }
         )
     }
@@ -47,13 +47,13 @@ class SharedPreferencesActivity : AppCompatActivity() {
         prefs.loadAsync(
             key = "kolya",
             defaultValue = "DefaultUser ",
+
             onResult = { result ->
-                // Загружено значение
-                binding.getValue.text = "Loaded value: $result"
+                binding.getValue.text = TODO()
             },
+
             onError = { e ->
-                // Ошибка при загрузке
-                binding.getValue.text = "Error loading value: ${e.message}"
+                binding.getValue.text = TODO()
             }
         )
     }

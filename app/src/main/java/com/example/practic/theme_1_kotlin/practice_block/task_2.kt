@@ -28,32 +28,31 @@ class App(private val coroutineScope: CoroutineScope = CoroutineScope(Dispatcher
     что это свойство делегируется классу CachedLaunchTime.
     Это означает, что все операции получения и установки значения
     этого свойства будут обрабатываться через CachedLaunchTime.*/
-    var launchTime: Long by CachedLaunchTime()
+    private var launchTime: Long by CachedLaunchTime()
 
     init {
         launchTime = System.currentTimeMillis()
         println("Значение установлено")
 
-        startLogging() // Запуск логирования
+        startLogging()
     }
 
     private fun startLogging() {
         coroutineScope.launch {
             while (true) {
-                delay(3000) // Задержка на 3 секунды
-                println("Cached Launch Time: $launchTime") // Логирование
+                delay(3000)
+                println("Cached Launch Time: $launchTime")
             }
         }
     }
 
-    // Метод для завершения корутин, если это потребуется
     fun stopLogging() {
         coroutineScope.cancel() // Отмена всех корутин в этом скоупе
     }
 }
 
 fun main() {
-    val app = App() // Создаем экземпляр приложения
-    Thread.sleep(15000) // Даем время на вывод логов (15 секунд)
-    app.stopLogging() // Остановка логирования (опционально)
+    val app = App()
+    Thread.sleep(15000) // Даем время на вывод логов 15 сек
+    app.stopLogging() // Остановка логирования
 }
