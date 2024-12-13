@@ -34,10 +34,12 @@ class SharedPreferencesActivity : AppCompatActivity() {
             useCommit = false,
 
             onSuccess = {
+
                 binding.getValue.text = TODO()
             },
 
             onError = { e ->
+
                 binding.getValue.text = TODO()
             }
         )
@@ -49,10 +51,12 @@ class SharedPreferencesActivity : AppCompatActivity() {
             defaultValue = "DefaultUser ",
 
             onResult = { result ->
+
                 binding.getValue.text = TODO()
             },
 
             onError = { e ->
+
                 binding.getValue.text = TODO()
             }
         )
