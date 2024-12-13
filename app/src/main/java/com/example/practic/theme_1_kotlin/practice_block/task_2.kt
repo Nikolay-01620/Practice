@@ -45,7 +45,6 @@ class App(private val coroutineScope: CoroutineScope = CoroutineScope(Dispatcher
             }
         }
     }
-
     fun stopLogging() {
         coroutineScope.cancel() // Отмена всех корутин в этом скоупе
     }
