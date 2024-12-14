@@ -1,11 +1,10 @@
 package com.example.practic.theme_1_kotlin.ru_git.task_2_screen
 
-/*
 class ArticlesCardsViewModel : BaseViewModel() {
 
     fun loadArticles() {
         fetchData(
-            action = { getArticlesUseCase.execute() },
+            action = {  }, //вызов юскейса
             onSuccess = { articles ->
                 // Обработать загруженные статьи
             },
@@ -15,4 +14,3 @@ class ArticlesCardsViewModel : BaseViewModel() {
         )
     }
 }
-*/
