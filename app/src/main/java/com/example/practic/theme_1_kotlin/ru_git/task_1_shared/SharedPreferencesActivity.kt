@@ -33,9 +33,9 @@ class SharedPreferencesActivity : AppCompatActivity() {
             value = valueToSave,
             useCommit = false,
 
-            //onSuccess = { binding.getValue.text = TODO() },
+            onSuccess = { binding.getValue.text = TODO() },
 
-            //onError = { e -> binding.getValue.text = TODO() }
+            onError = { e -> binding.getValue.text = TODO() }
         )
     }
 
