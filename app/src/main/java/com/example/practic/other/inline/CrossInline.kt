@@ -9,10 +9,10 @@ inline fun test(block: () -> Unit) {
     println("After block") // Этот код не выполнится, если в block есть return
 }
 
-fun main() {
+fun com.example.practic.interview_questions.main() {
     test {
         println("Inside block")
-        return // Завершает всю функцию main!
+        return // Завершает всю функцию com.example.practic.interview_questions.main!
     }
     println("This will not be printed")
 }

@@ -6,7 +6,7 @@ class ArticlesCardsViewModel : BaseViewModel() {
         fetchData(
             action = {  }, //вызов юскейса
             onSuccess = { articles ->
-                // Обработать загруженные статьи
+                // обработка загруженных статей
             },
             onError = { error ->
                 // Логика обработки ошибок
