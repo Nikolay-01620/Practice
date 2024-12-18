@@ -12,7 +12,7 @@ fun SharedPreferences.saveAsync(
     value: Any?,
     useCommit: Boolean = false,
     onSuccess: (() -> Unit)? = null,
-    onError: ((Exception) -> Unit)? = null
+    onError: ((Exception, String) -> Unit)? = null
 ) {
     CoroutineScope(Dispatchers.IO).launch {
         try {
@@ -38,7 +38,7 @@ fun SharedPreferences.saveAsync(
             }
         } catch (e: Exception) {
             withContext(Dispatchers.Main) {
-                onError?.invoke(e)
+                onError?.invoke(e, "Error while saving in preferences : $e")
             }
         }
     }
