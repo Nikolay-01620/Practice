@@ -69,8 +69,6 @@ suspend fun runAsyncTasksWithCoroutineScope(): String {
 }
 
 
-
-
 /** После проброса ошибки возврата из род.скоупа не будет  */
 suspend fun runAsyncTasksWithCoroutineScope1(): String {
 
