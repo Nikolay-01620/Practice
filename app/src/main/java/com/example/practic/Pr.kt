@@ -16,13 +16,13 @@ import kotlin.coroutines.resume
 import kotlin.random.Random
 
 
-//Написать функцию, которая делает несколько асинхронно запросов
-//и в случае ошибки пытается повторить запрос до трех раз.
+/** Написать функцию, которая делает несколько асинхронно запросов
+и в случае ошибки пытается повторить запрос до трех раз. */
 
-/*
 fun main() = runBlocking {
     val ids = listOf(1, 2, 3, 4, 5)
 
+    /** Преобразование входных данных в асинхронные запросы */
     val defferedList = ids.map {
         async {
             getUserByIdWithRetry(it)
@@ -34,16 +34,29 @@ fun main() = runBlocking {
     }
 }
 
-
 suspend fun getUserByIdWithRetry(id: Int): String {
-  return  retry(3) { getUserById(id) }
 
+    /** На каждой из 3 итераций repeat проверяется успешность запроса */
+    repeat(3) { currentIterationIndex ->
+
+        try {
+            // Возврат результата запроса
+            return getUserById(id)
+
+        } catch (e: Exception) {
+
+            /** Если это последняя попытка ( текущий индекс = 2), то после
+            возвращаем сообщение об ошибке */
+            if (currentIterationIndex == 2) {
+                return "Failed to fetch user $id after 3 attempts"
+            }
+        }
+    }
+    return "getUserByIdWithRetry completed"
 }
 
-
 suspend fun getUserById(id: Int): String {
-    delay(3000)
+    delay(1000)
     return if (Random.nextBoolean()) "User $id" else throw Exception("INVALID ID")
 
 }
-*/
