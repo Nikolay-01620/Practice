@@ -40,6 +40,23 @@ android {
 
 dependencies {
 
+
+
+    dependencies {
+        // RxJava (Core) - библиотека для работы с реактивным программированием
+        implementation (libs.rxjava) // (RxJava 2.x для создания и работы с потоками данных)
+
+        // RxAndroid для работы с потоками на Android - помогает управлять потоками на Android, в том числе переключаться на главный поток
+        implementation (libs.rxandroid) // (Поддержка потоков в Android, включая RxJavaSchedulers)
+
+        // Для интеграции с LiveData - устаревшая зависимость для работы с LiveData в старых версиях библиотеки
+        implementation (libs.androidx.lifecycle.extensions) // (Обеспечивает работу с LiveData и ViewModel)
+
+        // Котлин синтаксис (если нужно) - для работы с Kotlin
+        implementation (libs.kotlin.stdlib.jdk7) // (Стандартная библиотека Kotlin для Java 7)
+    }
+
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)

@@ -13,13 +13,18 @@
         android:theme="@style/Theme.Practic"
         tools:targetApi="31">
         <activity
-            android:name=".themes.theme_1_kotlin.ru_git.task_1_shared.SharedPreferencesActivity"
+            android:name=".themes.rx_3.MainActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Practic" />
+        <activity
+            android:name=".themes.kotlin_1.ru_git.task_1_shared.SharedPreferencesActivity"
             android:exported="true">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
     </application>
+
 </manifest>
