@@ -6,18 +6,22 @@ import java.util.concurrent.TimeUnit
 
 @SuppressLint("CheckResult")
 fun main() {
-    // Создаем Observable, который получает данные о погоде
-    val weatherObservable = Observable.just("Sunny").delay(2, TimeUnit.SECONDS)
+    // Поток 1: Погода
+    val weatherObservable = Observable.just("Sunny").delay(1, TimeUnit.SECONDS)
 
-    // Создаем Observable, который получает новости
-    val newsObservable = Observable.just("Breaking news!").delay(1, TimeUnit.SECONDS)
+    // Поток 2: Новости
+    val newsObservable = Observable.just("Breaking news!").delay(2, TimeUnit.SECONDS)
+
+    // Поток 3: Средняя температура
+    val temperatureObservable = Observable.just("22°C").delay(3, TimeUnit.SECONDS)
 
     // Используем combineLatest для комбинирования данных
     Observable.combineLatest(
         weatherObservable,
         newsObservable,
-        { weather: String, news: String ->
-            "Weather: $weather, News: $news"
+        temperatureObservable,
+        { weather: String, news: String, temperature: String ->
+            "Weather: $weather, News: $news, Temperature: $temperature"
         }
     )
         .subscribe(
@@ -25,6 +29,6 @@ fun main() {
             { error -> println("Error: $error") }  // Обработка ошибок
         )
 
-    // Для того чтобы программа не завершалась сразу, нужно немного подождать
+    // Задержка, чтобы программа не завершалась сразу
     Thread.sleep(5000)
 }

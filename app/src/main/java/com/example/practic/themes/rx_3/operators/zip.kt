@@ -6,19 +6,29 @@ import java.util.concurrent.TimeUnit
 
 @SuppressLint("CheckResult")
 fun main() {
-    // Создаем три потока, которые эмиттят по одному элементу через 5 секунд
-    val flow1 = Observable.just(1).delay(2, TimeUnit.SECONDS)
-    val flow2 = Observable.just(2).delay(2, TimeUnit.SECONDS)
-    val flow3 = Observable.just(3).delay(2, TimeUnit.SECONDS)
+    // Поток 1: Погода
+    val weatherObservable = Observable.just("Sunny").delay(1, TimeUnit.SECONDS)
 
-    // Используем zip, чтобы синхронизировать потоки
-    Observable.zip(flow1, flow2, flow3) { t1, t2, t3 ->
-        "Result: $t1, $t2, $t3"
-    }
-        .subscribe { result ->
-            println(result)
+    // Поток 2: Новости
+    val newsObservable = Observable.just("Breaking news!").delay(2, TimeUnit.SECONDS)
+
+    // Поток 3: Средняя температура
+    val temperatureObservable = Observable.just("22°C").delay(3, TimeUnit.SECONDS)
+
+    // Используем zip для комбинирования данных
+    Observable.zip(
+        weatherObservable,
+        newsObservable,
+        temperatureObservable,
+        { weather: String, news: String, temperature: String ->
+            "Weather: $weather, News: $news, Temperature: $temperature"
         }
+    )
+        .subscribe(
+            { result -> println(result) },  // Печатаем результат
+            { error -> println("Error: $error") }  // Обработка ошибок
+        )
 
-    // Чтобы программа не завершалась сразу, добавим задержку в конце
-    Thread.sleep(3000)
+    // Задержка, чтобы программа не завершалась сразу
+    Thread.sleep(5000)
 }
