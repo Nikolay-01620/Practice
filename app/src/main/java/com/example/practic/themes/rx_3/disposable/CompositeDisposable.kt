@@ -1,5 +1,4 @@
-package com.example.practic.themes.rx_3.Disposable
-
+package com.example.practic.themes.rx_3.disposable
 import io.reactivex.Observable
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers

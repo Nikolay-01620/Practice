@@ -9,7 +9,7 @@ package com.example.practic.themes.coroutines_2.interview_questions
 
 
 /*
-fun main() = runBlocking {
+fun com.example.practic.themes.rx_3.Disposable.main() = runBlocking {
     // Создаем Flow, который генерирует числа от 1 до 5
     val numbersFlow = flow {
         for (i in 1..5) {

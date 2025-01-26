@@ -1,7 +1,7 @@
 package com.example.practic.themes.coroutines_2.interview_questions
 
 /*
-fun com.example.practic.theme_2_coroutines.main() = runBlocking {
+fun com.example.practic.theme_2_coroutines.com.example.practic.themes.rx_3.Disposable.main() = runBlocking {
     // Создание CoroutineExceptionHandler
     val coroutineExceptionHandler = CoroutineExceptionHandler { context, throwable ->
         println("Ошибка: ${throwable.message} в контексте $context")
