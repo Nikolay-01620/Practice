@@ -1,4 +1,4 @@
-package com.example.practic.themes.rx_3.flowable
+package com.example.practic.themes.rx_3.interview_questions.flowable
 
 import io.reactivex.Flowable
 import io.reactivex.FlowableSubscriber

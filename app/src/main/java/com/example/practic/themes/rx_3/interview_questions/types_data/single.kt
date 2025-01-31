@@ -1,4 +1,4 @@
-package com.example.practic.themes.rx_3.types_data
+package com.example.practic.themes.rx_3.interview_questions.types_data
 
 import io.reactivex.Single
 

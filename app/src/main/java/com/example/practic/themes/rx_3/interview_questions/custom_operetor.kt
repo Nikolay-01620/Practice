@@ -1,10 +1,8 @@
-package com.example.practic.themes.rx_3
+package com.example.practic.themes.rx_3.interview_questions
 
 import android.annotation.SuppressLint
 import io.reactivex.Flowable
 import io.reactivex.FlowableTransformer
-import io.reactivex.Observable
-import io.reactivex.ObservableTransformer
 
 fun filterEvenNumbers(): FlowableTransformer<Int, Int> {
     return FlowableTransformer { upstream ->

@@ -1,4 +1,4 @@
-package com.example.practic.themes.rx_3.subject
+package com.example.practic.themes.rx_3.interview_questions.subject
 
 import android.annotation.SuppressLint
 import io.reactivex.Observable
