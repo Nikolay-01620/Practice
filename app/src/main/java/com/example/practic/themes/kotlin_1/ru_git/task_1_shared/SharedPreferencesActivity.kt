@@ -3,11 +3,11 @@ package com.example.practic.themes.kotlin_1.ru_git.task_1_shared
 import android.content.Context
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.practic.databinding.SharedActivityBinding
+import com.example.practic.databinding.KotlinSharedActivityBinding
 
 class SharedPreferencesActivity : AppCompatActivity() {
 
-    private lateinit var binding: SharedActivityBinding
+    private lateinit var binding: KotlinSharedActivityBinding
     /* var pref: SharedPreferences
 
     init {
@@ -17,7 +17,7 @@ class SharedPreferencesActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = SharedActivityBinding.inflate(layoutInflater)
+        binding = KotlinSharedActivityBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         binding.buttonSave.setOnClickListener {

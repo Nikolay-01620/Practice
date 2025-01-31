@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.kotlin_activity_main)
 
         val showButtonInt = findViewById<Button>(R.id.showInt)
         val firstInt = mixedList.findFirstInt()

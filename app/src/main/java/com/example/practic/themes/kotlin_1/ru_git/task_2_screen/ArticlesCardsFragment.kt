@@ -5,14 +5,14 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
-import com.example.practic.databinding.FragmentArcticlesCardsBinding
+import com.example.practic.databinding.KotlinFragmentArcticlesCardsBinding
 import kotlinx.coroutines.launch
 
 /**
  * Фрагмент для отображения списка статей, использующий `ArticlesCardsViewModel` для загрузки данных.
  */
 class ArticlesCardsFragment :
-    BaseFragment<FragmentArcticlesCardsBinding, ArticlesCardsViewModel>() {
+    BaseFragment<KotlinFragmentArcticlesCardsBinding, ArticlesCardsViewModel>() {
 
     /** Получаем ViewModel для работы с данными */
     private val articlesCardsViewModel: ArticlesCardsViewModel by viewModels()
@@ -26,8 +26,8 @@ class ArticlesCardsFragment :
     override fun initBinding(
         inflater: LayoutInflater,
         container: ViewGroup?
-    ): FragmentArcticlesCardsBinding {
-        return FragmentArcticlesCardsBinding.inflate(inflater, container, false)
+    ): KotlinFragmentArcticlesCardsBinding {
+        return KotlinFragmentArcticlesCardsBinding.inflate(inflater, container, false)
     }
 
     /** Настройка UI (например, вызов метода загрузки статей) */
@@ -47,5 +47,4 @@ class ArticlesCardsFragment :
             }
         }
     }
-
 }
