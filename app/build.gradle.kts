@@ -40,9 +40,6 @@ android {
 
 dependencies {
 
-
-
-    dependencies {
         // RxJava (Core) - библиотека для работы с реактивным программированием
         implementation (libs.rxjava) // (RxJava 2.x для создания и работы с потоками данных)
 
@@ -54,7 +51,10 @@ dependencies {
 
         // Котлин синтаксис (если нужно) - для работы с Kotlin
         implementation (libs.kotlin.stdlib.jdk7) // (Стандартная библиотека Kotlin для Java 7)
-    }
+
+
+    implementation (libs.retrofit)
+    implementation (libs.converter.gson)
 
 
     implementation(libs.androidx.core.ktx)
