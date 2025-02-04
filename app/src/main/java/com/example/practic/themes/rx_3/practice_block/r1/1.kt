@@ -1,4 +1,4 @@
-package com.example.practic.themes.rx_3.practice_block.one
+package com.example.practic.themes.rx_3.practice_block.r1
 
 import android.annotation.SuppressLint
 import android.util.Log

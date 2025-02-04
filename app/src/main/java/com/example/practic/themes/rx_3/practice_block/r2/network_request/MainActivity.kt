@@ -1,4 +1,4 @@
-package com.example.practic.themes.rx_3.practice_block.two.network_request
+package com.example.practic.themes.rx_3.practice_block.r2.network_request
 
 import android.annotation.SuppressLint
 import android.os.Bundle
