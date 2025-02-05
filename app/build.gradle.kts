@@ -55,7 +55,7 @@ dependencies {
 
     implementation (libs.retrofit)
     implementation (libs.converter.gson)
-
+    implementation ("androidx.recyclerview:recyclerview:1.2.1")
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)

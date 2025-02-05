@@ -3,7 +3,7 @@ package com.example.practic.theme_2_coroutines.practice_block
 
 import kotlinx.coroutines.*
 
-fun com.example.practic.themes.rx_3.Disposable.main() = runBlocking(Dispatchers.IO) {  // Корневая корутина с диспетчером Main
+fun com.example.practic.themes.rx_3.Disposable.com.example.practic.themes.rx_3.practice_block.task_2.discountcards_5.com.example.practic.themes.rx_3.practice_block.task_2.discountcards_5.main() = runBlocking(Dispatchers.IO) {  // Корневая корутина с диспетчером Main
     // Задачи выполняются на главном диспетчере
     val job1 = async {
         println("Task 1 started")

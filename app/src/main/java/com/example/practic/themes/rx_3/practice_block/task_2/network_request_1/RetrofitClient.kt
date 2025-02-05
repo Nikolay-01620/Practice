@@ -1,4 +1,4 @@
-package com.example.practic.themes.rx_3.practice_block.r2.network_request
+package com.example.practic.themes.rx_3.practice_block.task_2.network_request_1
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
