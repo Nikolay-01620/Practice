@@ -1,4 +1,4 @@
-package com.example.practic.themes.rx_3.practice_block.task_2.network_request_1
+package com.example.practic.themes.rx_3.practice_block.tasks_2.network_request_1
 
 import retrofit2.Call
 import retrofit2.Callback

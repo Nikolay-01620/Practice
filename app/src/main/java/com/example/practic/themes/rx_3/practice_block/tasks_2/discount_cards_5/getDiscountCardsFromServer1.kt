@@ -1,4 +1,4 @@
-package com.example.practic.themes.rx_3.practice_block.task_2.discount_cards_5
+package com.example.practic.themes.rx_3.practice_block.tasks_2.discount_cards_5
 
 import android.annotation.SuppressLint
 import io.reactivex.Observable

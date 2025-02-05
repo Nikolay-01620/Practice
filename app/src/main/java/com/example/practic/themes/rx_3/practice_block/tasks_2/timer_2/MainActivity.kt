@@ -1,4 +1,4 @@
-package com.example.practic.themes.rx_3.practice_block.task_2.timer_2
+package com.example.practic.themes.rx_3.practice_block.tasks_2.timer_2
 import android.annotation.SuppressLint
 import android.os.Bundle
 import android.widget.Button

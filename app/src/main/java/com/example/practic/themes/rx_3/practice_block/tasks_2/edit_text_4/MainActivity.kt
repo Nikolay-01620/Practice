@@ -1,4 +1,4 @@
-package com.example.practic.themes.rx_3.practice_block.task_2.edit_text_4
+package com.example.practic.themes.rx_3.practice_block.tasks_2.edit_text_4
 
 import android.os.Bundle
 import android.text.Editable
