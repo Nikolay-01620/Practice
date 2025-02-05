@@ -19,7 +19,7 @@
             android:exported="false"
             android:theme="@style/Theme.Practic" />
         <activity
-            android:name=".themes.rx_3.practice_block.task_2.edit_text_4.MainActivity"
+            android:name=".themes.rx_3.practice_block.task_2.recycler_view_3.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

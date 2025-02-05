@@ -6,6 +6,7 @@ import io.reactivex.Observable
 import io.reactivex.schedulers.Schedulers
 import java.util.concurrent.TimeUnit
 
+/** Демонстрация работы subscribeOn с observeOn */
 @SuppressLint("CheckResult")
 fun main() {
     Observable.timer(10, TimeUnit.MILLISECONDS, Schedulers.newThread())
@@ -13,17 +14,24 @@ fun main() {
         .map {
             Log.d("HAHAHA", "mapThread = ${Thread.currentThread().name}")
         }
+
+        /** doOnSubscribe — позволяет выполнить действие, как только происходит подписка,
+        но без изменения потока или поведения самой подписки.
+        Этот оператор не влияет на Observable.*/
         .doOnSubscribe {
             Log.d("HAHAHA", "onSubscribeThread = ${Thread.currentThread().name}")
         }
-        .subscribeOn(Schedulers.computation()) // игнор
+        .subscribeOn(Schedulers.computation())  /** игнор*/
         .observeOn(Schedulers.single())
         .flatMap {
             Log.d("HAHAHA", "flatMapThread = ${Thread.currentThread().name}")
             Observable.just(it)
-                .subscribeOn(Schedulers.io()) // не игнор, так как создается просто вложенный observable
+                .subscribeOn(Schedulers.io())  /** не игнор, так как создается просто вложенный observable*/
         }
         .subscribe {
             Log.d("HAHAHA", "subscribeThread = ${Thread.currentThread().name}")
         }
 }
+
+
+

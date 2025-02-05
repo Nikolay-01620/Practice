@@ -5,6 +5,7 @@ import android.util.Log
 import io.reactivex.subjects.PublishSubject
 import io.reactivex.subjects.ReplaySubject
 
+/** Два варианта эмита всех значений*/
 @SuppressLint("CheckResult")
 fun main() {
     val subject = ReplaySubject.create<String>()

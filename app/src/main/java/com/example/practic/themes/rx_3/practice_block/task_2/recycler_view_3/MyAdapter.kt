@@ -8,7 +8,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.practic.R
 import io.reactivex.subjects.PublishSubject
 
-// Adapter.kt
 class MyAdapter(private val items: List<String>, private val itemClickSubject: PublishSubject<Int>) : RecyclerView.Adapter<MyAdapter.ViewHolder>() {
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {

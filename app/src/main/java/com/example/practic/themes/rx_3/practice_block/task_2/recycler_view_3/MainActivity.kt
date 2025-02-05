@@ -7,7 +7,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.practic.R
 import io.reactivex.subjects.PublishSubject
 
-// com.example.practic.themes.rx_3.practice_block.task_2.`2_timer`.MainActivity.kt
 class MainActivity : AppCompatActivity() {
 
     private lateinit var recyclerView: RecyclerView
