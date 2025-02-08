@@ -14,7 +14,6 @@ import com.example.practic.databinding.SdkFragmentOneBinding
 class OneFragment : Fragment() {
 
     private lateinit var binding: SdkFragmentOneBinding
-    private val router = RouterFragment.newInstance()
 
     override fun onCreateView(
         inflater: LayoutInflater,

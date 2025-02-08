@@ -11,13 +11,17 @@ import com.example.practic.databinding.SdkFragmentOneBinding
 import com.example.practic.databinding.SdkFragmentTwoBinding
 
 
-class TwoFragment : Fragment(R.layout.sdk_fragment_two) {
+class TwoFragment : Fragment() {
 
-    private val binding by viewBinding<SdkFragmentTwoBinding>()
+    private lateinit var binding: SdkFragmentTwoBinding
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
+        binding = SdkFragmentTwoBinding.inflate(inflater)
+        return binding.root
     }
+
 }
