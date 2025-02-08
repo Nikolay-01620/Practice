@@ -52,10 +52,17 @@ dependencies {
         // Котлин синтаксис (если нужно) - для работы с Kotlin
         implementation (libs.kotlin.stdlib.jdk7) // (Стандартная библиотека Kotlin для Java 7)
 
-
+    //Retrofit
     implementation (libs.retrofit)
     implementation (libs.converter.gson)
+
+    //Rv
     implementation ("androidx.recyclerview:recyclerview:1.2.1")
+
+
+    //BindingDelegate
+    implementation("com.github.kirich1409:viewbindingpropertydelegate:1.5.2")
+
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)

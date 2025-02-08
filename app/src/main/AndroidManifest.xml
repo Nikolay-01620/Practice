@@ -15,11 +15,7 @@
         android:theme="@style/Theme.Practic"
         tools:targetApi="31">
         <activity
-            android:name=".themes.kotlin_1.practice_block.task_3.MainActivity"
-            android:exported="false"
-            android:theme="@style/Theme.Practic" />
-        <activity
-            android:name=".themes.rx_3.practice_block.tasks_2.recycler_view_3.MainActivity"
+            android:name=".themes.sdk_4.practice_block.router.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
