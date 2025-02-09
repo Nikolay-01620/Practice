@@ -59,9 +59,11 @@ dependencies {
     //Rv
     implementation ("androidx.recyclerview:recyclerview:1.2.1")
 
-
     //BindingDelegate
     implementation("com.github.kirich1409:viewbindingpropertydelegate:1.5.2")
+
+    // WorkManager
+    implementation ("androidx.work:work-runtime-ktx:2.8.1")
 
 
     implementation(libs.androidx.core.ktx)

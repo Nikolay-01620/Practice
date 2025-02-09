@@ -1,8 +1,5 @@
-package com.example.practic.themes.sdk_4.practice_block.router
+package com.example.practic.themes.sdk_4.practice_block.router_1
 
-import android.os.Bundle
-import android.util.Log
-import android.view.View
 import androidx.fragment.app.Fragment
 import com.example.practic.R
 
