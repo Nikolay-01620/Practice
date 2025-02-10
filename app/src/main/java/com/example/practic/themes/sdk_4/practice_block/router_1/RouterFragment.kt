@@ -1,20 +1,22 @@
 package com.example.practic.themes.sdk_4.practice_block.router_1
 
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentActivity
 import com.example.practic.R
 
+class FragmentRouter(private val activity: FragmentActivity) {
 
-class RouterFragment : Fragment(R.layout.sdk_fragment_one) {
+    fun navigateTo(fragment: Fragment, addToBackStack: Boolean = true) {
+        val transaction = activity.supportFragmentManager.beginTransaction()
+            .replace(R.id.placeHolder, fragment)
 
-    companion object {
-        @JvmStatic
-        fun newInstance() = RouterFragment()
+        if (addToBackStack) {
+            transaction.addToBackStack(null)
+        }
+        transaction.commit()
     }
 
-    fun navigateToFragment(idHolder:Int,fragment: Fragment) {
-        parentFragmentManager.beginTransaction()
-            .replace(idHolder, fragment)
-            .addToBackStack(null)
-            .commit()
+    fun goBack() {
+        activity.supportFragmentManager.popBackStack()
     }
 }

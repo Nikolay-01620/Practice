@@ -11,6 +11,7 @@ import com.example.practic.databinding.SdkFragmentOneBinding
 class OneFragment : Fragment() {
 
     private lateinit var binding: SdkFragmentOneBinding
+    private lateinit var router: FragmentRouter
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -24,11 +25,10 @@ class OneFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        router = FragmentRouter(requireActivity())
+
         binding.buttonNext.setOnClickListener {
-            parentFragmentManager.beginTransaction()
-                .replace(R.id.placeHolder, TwoFragment())
-                .addToBackStack(null)
-                .commit()
+            router.navigateTo(TwoFragment())
         }
     }
 }

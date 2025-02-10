@@ -1,22 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center">
 
-    <!-- Кнопка для перехода на следующий фрагмент -->
     <Button
-        android:id="@+id/button_next"
+        android:id="@+id/buttonNext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Next" />
+        android:layout_marginTop="21dp"
+        android:text="Next"
+        app:layout_constraintEnd_toEndOf="@+id/textView3"
+        app:layout_constraintStart_toStartOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
-    <!-- Кнопка для перехода на предыдущий фрагмент -->
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="88dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="165dp"
+        android:layout_marginTop="303dp"
+        android:layout_marginEnd="161dp"
+        android:text="TwoFragment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <Button
-        android:id="@+id/button_prev"
+        android:id="@+id/buttonPrev2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Previous" />
+        android:layout_marginTop="15dp"
+        android:text="Previous"
+        app:layout_constraintEnd_toEndOf="@+id/buttonNext"
+        app:layout_constraintStart_toStartOf="@+id/buttonNext"
+        app:layout_constraintTop_toBottomOf="@+id/buttonNext" />
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

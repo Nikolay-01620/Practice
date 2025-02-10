@@ -11,6 +11,8 @@ import com.example.practic.databinding.SdkFragmentTwoBinding
 class TwoFragment : Fragment() {
 
     private lateinit var binding: SdkFragmentTwoBinding
+    private lateinit var router: FragmentRouter
+
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -19,6 +21,19 @@ class TwoFragment : Fragment() {
     ): View {
         binding = SdkFragmentTwoBinding.inflate(inflater)
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        router = FragmentRouter(requireActivity())
+
+        binding.buttonNext.setOnClickListener {
+            router.navigateTo(ThreeFragment())
+        }
+         binding.buttonPrev2.setOnClickListener {
+             router.goBack()
+         }
     }
 
 }

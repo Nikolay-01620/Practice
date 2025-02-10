@@ -6,16 +6,30 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.practic.R
+import com.example.practic.databinding.SdkFragmentThreeBinding
+import com.example.practic.databinding.SdkFragmentTwoBinding
 
 
 class ThreeFragment : Fragment() {
 
+    private lateinit var binding: SdkFragmentThreeBinding
+    private lateinit var router: FragmentRouter
+
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.sdk_fragment_three, container, false)
+    ): View {
+        binding = SdkFragmentThreeBinding.inflate(inflater)
+        return binding.root
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        router = FragmentRouter(requireActivity())
+        binding.buttonPrev3.setOnClickListener {
+            router.goBack()
+        }
+    }
 }
