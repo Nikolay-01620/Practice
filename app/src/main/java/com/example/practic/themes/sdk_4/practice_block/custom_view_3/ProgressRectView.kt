@@ -1,4 +1,4 @@
-package com.example.practic.themes.sdk_4.practice_block.`custom_view_3\`
+package com.example.practic.themes.sdk_4.practice_block.custom_view_3
 
 import android.annotation.SuppressLint
 import android.content.Context

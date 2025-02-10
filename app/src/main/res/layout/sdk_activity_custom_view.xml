@@ -4,21 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".themes.sdk_4.practice_block.custom_view_3\.MainActivity">
+    tools:context=".themes.sdk_4.practice_block.custom_view_3.MainActivity"
+    tools:ignore="ExtraText,MissingClass">
 
-    <com.example.practic.themes.sdk_4.practice_block.custom_view_3\.ProgressRectView
-        android:id="@+id/progressRectView"
-        android:layout_width="300dp"
-        android:layout_height="100dp"
-        android:layout_centerInParent="true"
-        android:layout_marginStart="55dp"
-        android:layout_marginTop="287dp"
-        android:layout_marginEnd="56dp"
-        android:layout_marginBottom="344dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
+    <com.example.practic.themes.sdk_4.practice_block.custom_view_3 tools:ignore="MissingConstraints" />
+    \.ProgressRectView
+    android:id="@+id/progressRectView"
+    android:layout_width="300dp"
+    android:layout_height="100dp"
+    android:layout_centerInParent="true"
+    android:layout_marginStart="55dp"
+    android:layout_marginTop="287dp"
+    android:layout_marginEnd="56dp"
+    android:layout_marginBottom="344dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
