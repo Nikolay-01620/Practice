@@ -31,10 +31,8 @@ class MyWork(context: Context, workerParams: WorkerParameters)
         )
         return Result.success()
         /** Возвращаем результат успешной работы */
-    }
 
     private fun createNotification(title: String, description: String) {
-
         val notificationManager =
             applicationContext
                 /** applicationContext.getSystemService() — это метод, который позволяет получить доступ к
