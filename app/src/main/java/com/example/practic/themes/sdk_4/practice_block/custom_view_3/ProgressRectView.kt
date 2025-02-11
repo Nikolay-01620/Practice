@@ -44,6 +44,9 @@ class ProgressRectView(context: Context, attrs: AttributeSet) : View(context, at
     @SuppressLint("ClickableViewAccessibility")
     override fun onTouchEvent(event: MotionEvent?): Boolean {
         when (event?.action) {
+
+            /** MotionEvent.ACTION_DOWN — событие при нажатии на экран.
+            Мы проверяем это событие, чтобы реагировать на начало касания. */
             MotionEvent.ACTION_DOWN -> {
                 // Увеличиваем прогресс на 10%
                 progress += 10f
