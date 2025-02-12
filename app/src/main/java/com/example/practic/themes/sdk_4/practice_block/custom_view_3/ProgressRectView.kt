@@ -11,15 +11,23 @@ import android.view.MotionEvent
 import android.view.View
 import kotlin.random.Random
 
+private const val MAX_PROGRESS = 100f  // Максимальный прогресс (100%)
+private const val PROGRESS_INCREMENT = 10f  // Увеличение прогресса на 10%
+private const val BACKGROUND_COLOR = Color.BLUE  // Цвет фона
+
 class ProgressRectView(context: Context, attrs: AttributeSet) : View(context, attrs) {
 
     private var progress = 0f  // Прогресс от 0% до 100%
-    private val maxProgress = 100f
     private val paint = Paint()
     private val progressRect = RectF()
-    
+
     // Инициализация случайного цвета
-    private val randomColor get() = Color.rgb(Random.nextInt(256), Random.nextInt(256), Random.nextInt(256))
+    private val randomColor
+        get() = Color.rgb(
+            Random.nextInt(256),
+            Random.nextInt(256),
+            Random.nextInt(256)
+        )
 
     init {
         paint.isAntiAlias = true
@@ -28,14 +36,14 @@ class ProgressRectView(context: Context, attrs: AttributeSet) : View(context, at
 
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
-        
+
         // Отрисовываем сам прямоугольник
-        canvas.drawColor(Color.BLUE)  // Цвет фона
+        canvas.drawColor(BACKGROUND_COLOR)  // Цвет фона
         val width = width.toFloat()
         val height = height.toFloat()
 
         // Задаем область, где будет рисоваться прогресс
-        progressRect.set(0f, 0f, width * (progress / maxProgress), height)
+        progressRect.set(0f, 0f, width * (progress / MAX_PROGRESS), height)
 
         // Отрисовываем заполненную область
         canvas.drawRect(progressRect, paint)
@@ -48,9 +56,8 @@ class ProgressRectView(context: Context, attrs: AttributeSet) : View(context, at
             /** MotionEvent.ACTION_DOWN — событие при нажатии на экран.
             Мы проверяем это событие, чтобы реагировать на начало касания. */
             MotionEvent.ACTION_DOWN -> {
-                // Увеличиваем прогресс на 10%
-                progress += 10f
-                if (progress > maxProgress) {
+                progress += PROGRESS_INCREMENT
+                if (progress > MAX_PROGRESS) {
                     progress = 0f  // Сбрасываем прогресс, если он больше 100%
                 }
                 // Меняем цвет на случайный
