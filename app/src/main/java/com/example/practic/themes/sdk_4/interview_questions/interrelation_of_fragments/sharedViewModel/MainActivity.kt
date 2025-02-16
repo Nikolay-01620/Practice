@@ -4,5 +4,5 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
-    val sharedViewModel: com.example.practic.themes.sdk_4.interview_questions.interrelation_of_fragments.sharedViewModel.SharedViewModel by viewModels()
+    val sharedViewModel: SharedViewModel by viewModels()
 }

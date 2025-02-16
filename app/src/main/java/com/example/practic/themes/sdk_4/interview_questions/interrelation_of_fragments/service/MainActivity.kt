@@ -11,7 +11,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.kotlin_activity_main)
 
-        val intent = Intent(this, DataService::class.java)
+        val intent = Intent(this, com.example.practic.themes.sdk_4.interview_questions.interrelation_of_fragments.service.DataService::class.java)
         startService(intent)
     }
 }

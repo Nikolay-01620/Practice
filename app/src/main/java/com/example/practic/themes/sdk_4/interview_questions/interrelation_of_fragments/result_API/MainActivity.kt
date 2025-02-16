@@ -5,7 +5,6 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.practic.R
-import com.example.practic.other.interrelation_of_fragments.bridge.FirstFragment
 
 class MainActivity : AppCompatActivity() {
 
