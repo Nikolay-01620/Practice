@@ -9,7 +9,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.kotlin_activity_main)
+        setContentView(R.layout.pr)
 
         val intent = Intent(this, com.example.practic.themes.sdk_4.interview_questions.interrelation_of_fragments.service.DataService::class.java)
         startService(intent)

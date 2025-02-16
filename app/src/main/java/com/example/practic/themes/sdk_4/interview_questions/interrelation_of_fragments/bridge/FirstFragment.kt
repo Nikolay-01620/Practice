@@ -9,6 +9,6 @@ class FirstFragment : Fragment() {
     }
 
     fun sendData() {
-        (activity as? com.example.practic.themes.sdk_4.interview_questions.interrelation_of_fragments.bridge.FragmentOwner)?.passDataToFragment("Hello, World!")
+        (activity as? FragmentOwner)?.passDataToFragment("Hello, World!")
     }
 }

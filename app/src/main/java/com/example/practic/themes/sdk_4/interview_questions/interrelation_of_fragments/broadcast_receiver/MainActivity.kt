@@ -9,7 +9,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.kotlin_activity_main)
+        setContentView(R.layout.pr)
 
         val intent = Intent("com.example.broadcast.MY_NOTIFICATION")
         intent.putExtra("data", "Hello from MainActivity")
