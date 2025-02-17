@@ -4,5 +4,5 @@ import retrofit2.http.GET
 
     interface ApiService {
         @GET("posts/1") // Получаем пост с id 1
-        fun getPost(): Call<Post>
+        fun getPost(position: Int, loadSize: Int): Call<Post>
     }

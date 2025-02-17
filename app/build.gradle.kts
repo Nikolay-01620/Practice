@@ -78,6 +78,11 @@ dependencies {
     // RecyclerView
     implementation ("androidx.recyclerview:recyclerview:1.2.1")
 
+    implementation ("androidx.paging:paging-runtime:3.3.6")
+
+
+        implementation ("androidx.work:work-runtime:2.7.1") // или более новая версия
+
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
