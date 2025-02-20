@@ -1,16 +1,17 @@
-package com.example.practic.themes.sdk_4.interview_questions
-
-import androidx.recyclerview.widget.DiffUtil
+package com.example.practic.themes.sdk_4.interview_questions.other
 
 fun main() {
 
 }
 
+/*
 class MyDiffCallback(private val oldList: List<MyItem>, private val newList: List<MyItem>) : DiffUtil.Callback() {
     override fun getOldListSize(): Int = oldList.size
     override fun getNewListSize(): Int = newList.size
 
-    /** Являются ли предметы одинаковыми */
+    */
+/** Являются ли предметы одинаковыми *//*
+
     override fun areItemsTheSame(oldItemPosition: Int, newItemPosition: Int): Boolean {
         return oldList[oldItemPosition].id == newList[newItemPosition].id // Сравниваем по уникальному идентификатору
     }
@@ -41,3 +42,4 @@ class MyItem {
             TODO()
         }
 }
+*/

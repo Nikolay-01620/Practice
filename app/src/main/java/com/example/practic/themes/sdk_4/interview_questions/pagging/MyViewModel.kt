@@ -8,6 +8,7 @@ import androidx.paging.PagingData
 import com.example.practic.themes.rx_3.practice_block.tasks_2.network_request_1.ApiService
 import kotlinx.coroutines.flow.Flow
 
+/*
 class MyViewModel(private val apiService: ApiService) : ViewModel() {
 
     val pagingDataFlow: Flow<PagingData<MyData>> = Pager(
@@ -19,3 +20,4 @@ class MyViewModel(private val apiService: ApiService) : ViewModel() {
         pagingSourceFactory = { MyPagingSource(apiService) }
     ).flow.cachedIn(viewModelScope) // cachedIn позволяет кэшировать данные в течение ViewModel
 }
+*/

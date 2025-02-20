@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.practic.R
 import kotlinx.coroutines.flow.collectLatest
 
+/*
 class MyActivity : AppCompatActivity() {
 
     private lateinit var viewModel: MyViewModel
@@ -41,3 +42,4 @@ class MyActivity : AppCompatActivity() {
         }
     }
 }
+*/

@@ -4,6 +4,7 @@ import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 
 // Ваш ViewHolder для пагинации
+/*
 class MyViewHolder() : RecyclerView.ViewHolder(binding.root) {
 
     private val binding:
@@ -17,3 +18,4 @@ class MyViewHolder() : RecyclerView.ViewHolder(binding.root) {
 }
 
 
+*/

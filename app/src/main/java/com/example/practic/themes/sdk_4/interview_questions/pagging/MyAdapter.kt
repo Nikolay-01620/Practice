@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
 
+/*
 class MyAdapter : PagingDataAdapter<MyData, MyViewHolder>(MyDataComparator) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
@@ -44,5 +45,6 @@ class MyAdapter : PagingDataAdapter<MyData, MyViewHolder>(MyDataComparator) {
     }
 }
 
+*/
 
 

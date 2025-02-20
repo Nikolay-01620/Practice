@@ -4,6 +4,7 @@ import androidx.paging.PagingSource
 import androidx.paging.PagingState
 import com.example.practic.themes.rx_3.practice_block.tasks_2.network_request_1.ApiService
 
+/*
 class MyPagingSource(private val apiService: ApiService) : PagingSource<Int, MyData>() {
 
     override suspend fun load(params: LoadParams<Int>): LoadResult<Int, MyData> {
@@ -26,3 +27,4 @@ class MyPagingSource(private val apiService: ApiService) : PagingSource<Int, MyD
         return state.anchorPosition?.let { state.closestItemToPosition(it)?.id }
     }
 }
+*/

@@ -1,4 +1,4 @@
-package com.example.practic.themes.sdk_4.interview_questions
+package com.example.practic.themes.sdk_4.interview_questions.other
 
 import android.content.Context
 import android.graphics.Canvas

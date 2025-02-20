@@ -4,7 +4,7 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-object NetworkUtils {
+/*object NetworkUtils {
 
     fun fetchPost(callback: (Post?) -> Unit, onError: (String) -> Unit) {
         RetrofitClient.instance.getPost(position, params.loadSize).enqueue(object : Callback<Post> {
@@ -21,4 +21,4 @@ object NetworkUtils {
             }
         })
     }
-}
+}*/

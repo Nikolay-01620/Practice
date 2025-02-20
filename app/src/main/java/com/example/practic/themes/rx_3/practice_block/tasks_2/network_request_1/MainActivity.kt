@@ -8,6 +8,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.practic.R
 
+/*
 class MainActivity : AppCompatActivity() {
 
     private lateinit var textView: TextView
@@ -44,3 +45,4 @@ class MainActivity : AppCompatActivity() {
         )
     }
 }
+*/
