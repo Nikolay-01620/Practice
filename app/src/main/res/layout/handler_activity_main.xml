@@ -3,25 +3,30 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp"
-    android:gravity="center">
+    android:padding="16dp">
 
-    <!-- TextView для отображения сообщений -->
+    <!-- Текстовое описание -->
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/instructionText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Привет!"
+        android:text="Press the button to send a message"
         android:textSize="18sp"
-        android:layout_marginBottom="24dp"
-        android:gravity="center"/>
+        android:layout_marginBottom="16dp" />
 
-    <!-- Кнопка для запуска долгой операции -->
+    <!-- Кнопка для отправки сообщения немедленно -->
     <Button
         android:id="@+id/button"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Запустить задачу"
+        android:text="Send Message Now" />
+
+    <!-- Кнопка для отправки сообщения с задержкой -->
+    <Button
+        android:id="@+id/buttonDelayed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Send Message with Delay"
         android:layout_marginTop="16dp"/>
 
 </LinearLayout>

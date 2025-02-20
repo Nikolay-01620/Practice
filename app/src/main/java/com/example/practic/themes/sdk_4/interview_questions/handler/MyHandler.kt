@@ -18,6 +18,11 @@ class MyHandler(looper: Looper, val context: Context) : Handler(looper) {
                 Toast.makeText(context, "Received Message 1", Toast.LENGTH_SHORT).show()
             }
 
+            2 -> {
+                // Сообщение с кодом 2 — Toast с задержкой
+                Toast.makeText(context, "Received Message 2 (Delayed)", Toast.LENGTH_SHORT).show()
+            }
+
             else -> {
                 // Если сообщение с другим кодом, игнорируем
                 Log.d("MyHandler", "Unknown message")
