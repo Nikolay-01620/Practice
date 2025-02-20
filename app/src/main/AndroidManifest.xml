@@ -16,7 +16,7 @@
         android:theme="@style/Theme.Practic"
         tools:targetApi="31">
         <activity
-            android:name=".themes.sdk_4.interview_questions.handler.HandlerActivity"
+            android:name=".themes.sdk_4.interview_questions.handlerThread.HandlerThreadActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
