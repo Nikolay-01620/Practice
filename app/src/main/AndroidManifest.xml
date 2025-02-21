@@ -14,9 +14,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Practic"
+        tools:ignore="ExtraText"
         tools:targetApi="31">
+
+        <provider
+            android:name="com.example.practic.themes.sdk_4.interview_questions.content_provider.NotesProvider"
+            android:authorities="com.example.practic.themes.sdk_4.interview_questions.content_provider.notesprovider"
+            android:enabled="true"
+            android:exported="false" />
+
+
         <activity
-            android:name=".themes.sdk_4.interview_questions.handlerThread.HandlerThreadActivity"
+            android:name=".themes.sdk_4.interview_questions.content_provider.ContentProviderActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

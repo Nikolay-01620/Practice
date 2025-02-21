@@ -38,7 +38,7 @@ class HandlerActivity : AppCompatActivity() {
                 myHandler.sendMessage(message)
             }
             // Отправляем Runnable через Handler с задержкой (2 секунды)
-            myHandler.postDelayed(runnable, 2000)
+            myHandler.postDelayed(runnable, 10000)
         }
     }
 }
