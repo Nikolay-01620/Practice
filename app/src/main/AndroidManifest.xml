@@ -24,8 +24,19 @@
             android:exported="false" />
 
 
+        <provider
+            android:name=".themes.sdk_4.interview_questions.file_provider.MyFileProvider"
+            android:authorities="com.example.fileproviderdemo.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+
         <activity
-            android:name=".themes.sdk_4.interview_questions.content_provider.ContentProviderActivity"
+            android:name=".themes.sdk_4.interview_questions.file_provider.FileProviderActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
