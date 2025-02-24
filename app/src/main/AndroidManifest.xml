@@ -17,16 +17,12 @@
         tools:ignore="ExtraText"
         tools:targetApi="31">
 
-        <provider
-            android:name="com.example.practic.themes.sdk_4.interview_questions.content_provider.NotesProvider"
-            android:authorities="com.example.practic.themes.sdk_4.interview_questions.content_provider.notesprovider"
-            android:enabled="true"
-            android:exported="false" />
+
 
 
         <provider
             android:name=".themes.sdk_4.interview_questions.file_provider.MyFileProvider"
-            android:authorities="com.example.fileproviderdemo.provider"
+            android:authorities="com.mydomain.fileprovider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data
