@@ -16,7 +16,7 @@ class MyFileProvider : FileProvider() {
     // Метод для генерации URI
     fun shareFile(context: Context, fileName: String, authority: String): Uri? {
         // Получаем путь к файлу
-        val filePath = File(context.filesDir, "my_folder")
+        val filePath = File(context.filesDir, "my_images")
         val file = File(filePath, fileName)
 
         // Инициализируем и запускаем FileObserver для отслеживания изменений
