@@ -17,6 +17,8 @@
         tools:ignore="ExtraText"
         tools:targetApi="31">
 
+        <profileable android:shell="true" />
+
 
         <provider
             android:name="com.example.practic.themes.sdk_4.interview_questions.content_provider.NotesProvider"
@@ -37,7 +39,7 @@
 
 
         <activity
-            android:name=".themes.sdk_4.interview_questions.file_provider.FileProviderActivity"
+            android:name=".themes.sdk_4.interview_questions.memory_process.ProcessMemoryInfoActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
