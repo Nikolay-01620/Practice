@@ -11,7 +11,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.sdk_activity_router)
             supportFragmentManager
                 .beginTransaction()
-                .replace(R.id.placeHolder, OneFragment())
+                .add(R.id.placeHolder, OneFragment())
                 .commit()
     }
 }
