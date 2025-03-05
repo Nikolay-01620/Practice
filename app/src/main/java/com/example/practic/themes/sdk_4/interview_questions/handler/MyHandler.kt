@@ -7,7 +7,9 @@ import android.os.Message
 import android.util.Log
 import android.widget.Toast
 
-class MyHandler(looper: Looper, val context: Context) : Handler(looper) {
+class MyHandler(looper: Looper, val context: Context) : Handler() {
+
+    /** это метод, который переопределен для обработки входящих*/
     override fun handleMessage(msg: Message) {
         super.handleMessage(msg)
 

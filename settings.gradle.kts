@@ -22,3 +22,4 @@ dependencyResolutionManagement {
 rootProject.name = "Practic"
 include(":app")
 include(":db_networks_patterns")
+include(":dagger")

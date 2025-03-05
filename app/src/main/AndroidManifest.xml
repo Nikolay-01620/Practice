@@ -39,7 +39,7 @@
 
 
         <activity
-            android:name=".themes.sdk_4.interview_questions.memory_process.ProcessMemoryInfoActivity"
+            android:name=".themes.sdk_4.interview_questions.handler.HandlerActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -24,9 +24,12 @@ class HandlerActivity : AppCompatActivity() {
         // Кнопка для отправки сообщения немедленно
         binding.button.setOnClickListener {
             // Отправляем сообщение с кодом 1
-            val message = Message.obtain()
+            val message = myHandler.obtainMessage()
             message.what = 1
             myHandler.sendMessage(message)
+
+            //myHandler.obtainMessage(1).sendToTarget()
+
         }
 
         // Кнопка для отправки сообщения с задержкой
@@ -38,7 +41,7 @@ class HandlerActivity : AppCompatActivity() {
                 myHandler.sendMessage(message)
             }
             // Отправляем Runnable через Handler с задержкой (2 секунды)
-            myHandler.postDelayed(runnable, 10000)
+            myHandler.postDelayed(runnable, 5000)
         }
     }
 }
