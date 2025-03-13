@@ -37,6 +37,11 @@ android {
 
 dependencies {
 
+    //Koin
+    val koinVersion = "3.5.0"
+    implementation("io.insert-koin:koin-core:$koinVersion")
+    implementation("io.insert-koin:koin-android:$koinVersion")
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
