@@ -8,15 +8,12 @@ import com.example.db_networks_patterns.flower_shop.entity.Flower
 
 @Dao
 interface FlowerDao {
-    @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertFlower(flower: Flower)
-
-    @Query("SELECT * FROM flowers WHERE id = :flowerId")
-    suspend fun getFlowerById(flowerId: Long): Flower?
-
+    // Метод для обновления количества цветков в базе данных
     @Query("UPDATE flowers SET availableQuantity = availableQuantity - :quantity WHERE id = :flowerId")
     suspend fun updateFlowerQuantity(flowerId: Long, quantity: Int)
-    
-    @Query("SELECT * FROM flowers")
-    suspend fun getAllFlowers(): List<Flower>
+
+    // Метод для удаления цветка, если его количество стало нулевым или меньше
+    @Query("DELETE FROM flowers WHERE id = :flowerId AND availableQuantity <= 0")
+    suspend fun deleteFlower(flowerId: Long)
 }
+

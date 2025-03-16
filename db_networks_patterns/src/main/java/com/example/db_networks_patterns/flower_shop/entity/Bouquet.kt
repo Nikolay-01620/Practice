@@ -5,7 +5,8 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "bouquets")
 data class Bouquet(
-    @PrimaryKey(autoGenerate = true) val id: Long = 0,
+    @PrimaryKey(autoGenerate = true) val bouquetId: Long = 0,
     val name: String, // Например, "Букет для свадьбы"
-    val price: Double // Цена букета
+    val price: Double,
+    val availableQuantity: Int
 )
