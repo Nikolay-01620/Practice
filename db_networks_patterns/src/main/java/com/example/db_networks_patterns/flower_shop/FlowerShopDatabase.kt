@@ -14,7 +14,6 @@ abstract class FlowerShopDatabase : RoomDatabase() {
     abstract fun flowerDao(): FlowerDao
     abstract fun bouquetDao(): BouquetDao
 
-
     // Тут создаем БД
 
 }
