@@ -31,17 +31,3 @@ class CarBuilder {
     }
 }
 
-fun main() {
-    
-    val car = CarBuilder()
-        .setBrand("Mercedes")
-        .setModel("E-Class")
-        .setColor("Black")
-        .build()
-
-    if (car != null) {
-        println("Car assembled: $car")
-    } else {
-        println("Car assembly failed")
-    }
-}
