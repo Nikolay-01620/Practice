@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.example.db_networks_patterns"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.example.db_networks_patterns"
@@ -39,6 +39,10 @@ dependencies {
 
     implementation("androidx.room:room-runtime:2.6.1")
     implementation("androidx.room:room-ktx:2.6.1")
+
+
+    implementation("com.squareup.okhttp3:okhttp:4.9.3") // Зависимость для OkHttp
+    implementation("com.squareup.okhttp3:logging-interceptor:4.9.3") // З
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
